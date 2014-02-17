@@ -12,8 +12,11 @@ class CrapApp
 
   get '/users/:user' do 
     data = Crap.new(params[:user])
-    data.show_data.each do |some|
-      "#{some}"
+    data.repos.each do |rep|
+      "#{rep}"
+      # data.langs(rep) do |cp|
+      #   "#{cp}"
+      # end
     end
     # data = JSON.parse(data.show)
     # data
